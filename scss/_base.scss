@@ -1,0 +1,13 @@
+body {
+  @include font-regular;
+  color: var(--color-font);
+}
+
+.container {
+  width: clamp(21.5625rem, 2.6456rem + 80.712vw, 99.5rem);
+  margin: 0 auto;
+}
+
+
+
+

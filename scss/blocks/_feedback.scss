@@ -1,0 +1,140 @@
+.feedback {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: 952px) {
+    flex-direction: column;
+  }
+
+
+  &-left {
+    background-color: #F1F1F1;
+    flex: 2;
+    padding: clamp(0rem, -12.9081rem + 21.6942vw, 13.125rem);
+    padding-right: 0;
+
+    @media screen and (max-width: 952px) {
+      padding: clamp(2.125rem, 1.0689rem + 4.5061vw, 3.75rem) 0 163px 0;
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.25rem, 0.8252rem + 1.8123vw, 3rem);
+    @include font-bold;
+    letter-spacing: 0.15em;
+    margin-bottom: clamp(2.0625rem, 1.6226rem + 1.877vw, 3.875rem);
+
+    @media screen and (max-width: 952px) {
+      text-align: center;
+    }
+  }
+
+  &-form {
+    @media screen and (max-width: 952px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      width: clamp(12.8125rem, 1.722rem + 17.8879vw, 23.1875rem);
+      height: clamp(2.9375rem, 0.1983rem + 4.4181vw, 5.5rem);
+      background-color: var(--color-second);
+      border: solid 4px var(--color-second);
+      border-radius: 10px;
+      margin-top: clamp(2rem, 1.3629rem + 2.7184vw, 4.625rem);
+      font-size: clamp(0.9375rem, 0.5734rem + 1.5534vw, 2.4375rem);
+      color: #fff;
+      letter-spacing: 0.15rem;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+
+  &-fields {
+    margin-bottom: clamp(0.5625rem, 0.4867rem + 0.3236vw, 0.875rem);
+
+    &__input {
+      width: clamp(16.0625rem, 10.6013rem + 23.301vw, 38.5625rem);
+      height: clamp(3.9375rem, 0.0625rem + 6.25vw, 7.5625rem);
+      padding-left: 5px;
+      display: block;
+      border: solid 4px var(--color-second);
+      border-radius: 10px;
+      @include font-regular;
+      font-size: clamp(0.9375rem, 0.6189rem + 1.3592vw, 2.25rem);
+      color: #000000;
+      background: transparent;
+
+      &::placeholder {
+        @include font-regular;
+        font-size: clamp(0.9375rem, 0.6189rem + 1.3592vw, 2.25rem);
+        color: #000000;
+      }
+
+      &-red {
+        &_active {
+          border-color: var(--color-form);
+          display: block;
+        }
+      }
+
+      &-empty {
+        color: var(--color-form);
+        line-height: 2;
+        display: none;
+
+        &_active {
+          display: block;
+        }
+      }
+
+      &-error {
+        color: var(--color-form);
+        line-height: 2;
+        display: none;
+
+        &_active {
+          display: block;
+        }
+      }
+
+      &-question {
+        color: rgb(3, 153, 103);
+        font-size: clamp(1rem, 0.7118rem + 1.2298vw, 2.1875rem);
+        display: none;
+
+        &_success {
+          display: block;
+        }
+      }
+    }
+
+    &__message {
+      height: clamp(6.3125rem, 4.9017rem + 6.0194vw, 12.125rem);
+    }
+  }
+
+  &-right {
+    background-color: var(--color-third);
+    flex: 1;
+  }
+
+  &__picture {
+    margin: clamp(0rem, -8.6054rem + 14.4628vw, 8.75rem);
+    margin-left: -120px;
+
+    @media screen and (max-width: 952px) {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    @media screen and (max-width: 952px) {
+      margin: 0 auto;
+      margin-top: -120px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: clamp(1.25rem, 0.3398rem + 3.8835vw, 5rem);
+
+  &__title {
+    font-size: clamp(1.25rem, 0.8252rem + 1.8123vw, 3rem);
+    @include font-bold;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    margin-bottom: clamp(1.5625rem, 1.3046rem + 1.1003vw, 2.625rem);
+  }
+
+  &-swiper {
+    width: 100%;
+    height: clamp(100px, 30vw, 400px);
+    overflow: hidden;
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__slide {
+      width: auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__background {
+    width: clamp(23.4375rem, 0rem + 100vw, 120rem);
+    height: clamp(5.5625rem, 0.8447rem + 20.1294vw, 25rem);
+    background-image: url(../img/shop-bcg.jpg);
+    margin-top: clamp(0.3125rem, 0.2367rem + 0.3236vw, 0.625rem);
+  }
+}
